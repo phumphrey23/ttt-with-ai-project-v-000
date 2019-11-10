@@ -49,13 +49,13 @@ class Game
    def draw?
     !won? && @board.full?
    end
-   
+
     def winner
      if won?
       return @board.cells[won?[0]]
      end
     end
-       
+
    def over?
      @board.full? || won?
    end
