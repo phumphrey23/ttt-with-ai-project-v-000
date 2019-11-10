@@ -49,16 +49,16 @@ class Game
    def draw?
     !won? && @board.full?
    end
-
-   def over?
-     @board.full? || won?
-   end
-
+   
     def winner
-      if won?
+     if won?
       return @board.cells[won?[0]]
      end
     end
+       
+   def over?
+     @board.full? || won?
+   end
 
     def valid_move(input)
       input = input.to_i
